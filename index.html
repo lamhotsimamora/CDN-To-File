@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/js-css/bootstrap.min.css">
+
+    <title>CDN To File</title>
+
+    <script type="text/javascript" src="assets/js-css/garuda.js"></script>
+  </head>
+  <body>
+    
+    <br>
+
+    <div class="container" id="app">
+	  <div class="jumbotron">
+	  	<h4>Copy paste URL (CDN js/css) in the below, and then click Get File.</h4> <br>
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">URL</span>
+		  </div>
+		  <input type="text" v-model="url" ref="url" class="form-control" placeholder="URL" aria-label="Username" aria-describedby="basic-addon1">
+		</div>
+		
+		<button @click="makeFile" :disabled="btn_disabled" type="button" class="btn btn-primary">{{ name_btn }}</button>
+		<button @click="clear" type="button" class="btn btn-success">Clear</button>
+		<hr>
+		<textarea name="" id="" cols="30" rows="10" class="form-control" v-model='response' readonly=""></textarea>
+	  </div>
+    </div>
+
+    <script src="assets/js-css/vue.js"></script>
+  </body>
+
+  <script src="app.js"></script>
+</html>
